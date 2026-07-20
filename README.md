@@ -52,7 +52,7 @@ weather-dashboard-js/
 
 ## 👨‍💻 Author
 
-*Kanu Jangid*
+*Preeti Jangid*
 
 ---
 
