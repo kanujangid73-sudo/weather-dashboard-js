@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Dashboard | Async JS & REST APIs</title>
+    <meta name="description" content="A dynamic, accessibility-compliant web dashboard fetching real-time weather metrics from a public REST API using asynchronous JavaScript fetch routines.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <div class="logo">
+            <span aria-label="Application Brand">WeatherPulse.io</span>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section aria-labelledby="dashboard-heading">
+            <h1 id="dashboard-heading">Asynchronous Weather Engine</h1>
+            <p>Query global city configurations to fetch live meteorological metrics using asynchronous API network requests.</p>
+
+            <!-- Search Interface Panel -->
+            <form id="search-form" class="accessible-form">
+                <div class="form-group">
+                    <label for="city-input">Search Global City Location</label>
+                    <div class="input-group">
+                        <input type="text" id="city-input" required aria-required="true" placeholder="e.g., Tokyo, London, New York...">
+                        <button type="submit">Fetch Weather</button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Accessibility Status Live Zone -->
+            <div id="status-announcer" class="sr-only" aria-live="polite"></div>
+
+            <!-- Error Feedback Output Target -->
+            <div id="error-display" class="error-banner hidden" role="alert"></div>
+
+            <!-- Dashboard Output Container -->
+            <div id="weather-display" class="dashboard-card hidden">
+                <div class="card-header">
+                    <h2 id="location-output">City Name</h2>
+                    <p id="condition-output">Clear Sky</p>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <span class="metric-label">Temperature</span>
+                        <span id="temp-output" class="metric-value">--°C</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Humidity</span>
+                        <span id="humidity-output" class="metric-value">--%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Wind Speed</span>
+                        <span id="wind-output" class="metric-value">-- km/h</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 WeatherPulse Engine. All rights reserved.</p>
+    </footer>
+
+    <script src="weather.js"></script>
+</body>
+</html>
